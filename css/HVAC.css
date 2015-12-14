@@ -3,7 +3,7 @@
 * Proprietary and confidential
 * Unauthorized copying of this file, via any medium, is strictly prohibited
 *
-* THIS CODE AND INFORMATION ARE PROVIDED "AS IS" WITHOUT WARRANTY OF ANY 
+* THIS CODE AND INFORMATION ARE PROVIDED "AS IS" WITHOUT WARRANTY OF ANY
 * KIND, EITHER EXPRESSED OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE
 * IMPLIED WARRANTIES OF MERCHANTABILITY AND/OR FITNESS FOR A
 * PARTICULAR PURPOSE.
@@ -245,19 +245,19 @@
   top: 40px;
   left: 7.5em;
   width: 20.9em;
-  height: 4.1em;
+  height: 1.5em;
   background: url('../images/hazard_off.svg') no-repeat;
-  background-size: 100%;
+  background-size: 100% 100%;
 }
 
 .hazard_btn.on {
   background: url('../images/hazard_on.svg') no-repeat;
-  background-size: 100%;
+  background-size: 100% 100%;
 }
 
 .hazard_btn.blink {
   background: url('../images/hazard_blink.svg') no-repeat;
-  background-size: 100%;
+  background-size: 100% 100%;
 }
 
 .climate_labels {
@@ -282,7 +282,7 @@
   opacity: .4;
 }
 
-/* displaying the "engine-off" class with this style indicates that 
+/* displaying the "engine-off" class with this style indicates that
 the engine is off and the seat heaters are unusable at that time */
 
 .left_seat_btn {
@@ -328,7 +328,7 @@ the engine is off and the seat heaters are unusable at that time */
 
 /*********RIGHT HEAT SEAT BUTTON************/
 
-/* displaying the "engine-off" class with this style indicates that 
+/* displaying the "engine-off" class with this style indicates that
 the engine is off and the seat heaters are unusable at that time */
 .right_seat_btn {
   position: absolute;
