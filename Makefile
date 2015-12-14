@@ -1,4 +1,4 @@
-PROJECT = JLRPOCX008.HVAC
+PROJECT = OPENIVI008.HVAC
 INSTALL_FILES = images js icon.png index.html
 WRT_FILES = DNA_common css icon.png index.html images setup config.xml js manifest.json README.txt
 VERSION := 0.0.1
@@ -15,7 +15,7 @@ dev: clean dev-common
 
 install_obs:
 	mkdir -p ${DESTDIR}/opt/usr/apps/.preinstallWidgets
-	cp -r JLRPOCX008.HVAC.wgt ${DESTDIR}/opt/usr/apps/.preinstallWidgets
+	cp -r OPENIVI008.HVAC.wgt ${DESTDIR}/opt/usr/apps/.preinstallWidgets
 
 config:
 	scp setup/weston.ini root@$(TIZEN_IP):/etc/xdg/weston/
@@ -29,24 +29,24 @@ kill.xwalk:
 	ssh root@$(TIZEN_IP) "pkill xwalk"
 
 kill.feb1:
-	ssh app@$(TIZEN_IP) "pkgcmd -k JLRPOCX008.HVAC"
+	ssh app@$(TIZEN_IP) "pkgcmd -k OPENIVI008.HVAC"
 
 run: install
 	ssh app@$(TIZEN_IP) "export DBUS_SESSION_BUS_ADDRESS='unix:path=/run/user/5000/dbus/user_bus_socket' && xwalkctl  2>&1 | egrep -e 'HVAC' | awk '{print $1}' | xargs --no-run-if-empty xwalk-launcher -d"
 
 run.feb1: install.feb1
-	ssh app@$(TIZEN_IP) "app_launcher -s JLRPOCX008.HVAC -d "
+	ssh app@$(TIZEN_IP) "app_launcher -s OPENIVI008.HVAC -d "
 
 install.feb1: deploy
 ifndef OBS
-	-ssh app@$(TIZEN_IP) "pkgcmd -u -n JLRPOCX008 -q"
-	ssh app@$(TIZEN_IP) "pkgcmd -i -t wgt -p /home/app/JLRPOCX008.HVAC.wgt -q"
+	-ssh app@$(TIZEN_IP) "pkgcmd -u -n OPENIVI008 -q"
+	ssh app@$(TIZEN_IP) "pkgcmd -i -t wgt -p /home/app/OPENIVI008.HVAC.wgt -q"
 endif
 
 install: deploy
 ifndef OBS
 	ssh app@$(TIZEN_IP) "export DBUS_SESSION_BUS_ADDRESS='unix:path=/run/user/5000/dbus/user_bus_socket' && xwalkctl  2>&1 | egrep -e 'HVAC' | awk '{print $1}' | xargs --no-run-if-empty xwalkctl -u"
-	ssh app@$(TIZEN_IP) "export DBUS_SESSION_BUS_ADDRESS='unix:path=/run/user/5000/dbus/user_bus_socket' && xwalkctl -i /home/app/JLRPOCX008.HVAC.wgt"
+	ssh app@$(TIZEN_IP) "export DBUS_SESSION_BUS_ADDRESS='unix:path=/run/user/5000/dbus/user_bus_socket' && xwalkctl -i /home/app/OPENIVI008.HVAC.wgt"
 endif
 
 $(PROJECT).wgt : wgt
