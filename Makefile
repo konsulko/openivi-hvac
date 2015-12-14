@@ -78,8 +78,8 @@ common: /opt/usr/apps/common-apps
 	@echo "Please install Common Assets"
 	exit 1
 
-dev-common: ../common-app
-	cp -rf ../common-app DNA_common
+dev-common: ../openivi-common-app
+	cp -rf ../openivi-common-app DNA_common
 	rm -fr ./DNA_common/.git
 	rm -fr ./DNA_common/common-app/.git
 
@@ -98,3 +98,8 @@ install_xwalk: $(INSTALL_DIR)
 
 dist:
 	tar czf ../$(PROJECT).tar.bz2 .
+
+../openivi-common-app:
+	#@echo "Please checkout Common Assets"
+	#exit 1
+	git clone https://github.com/konsulko/openivi-common-app.git ../openivi-common-app
