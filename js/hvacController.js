@@ -313,7 +313,7 @@ hvacController.prototype.onTargetTemperatureRightChanged = function (newStatus) 
 	var value = getTargetTemperatureSliderValue(newStatus);
 	$("#noUiSliderRight").val(value);
 	$(".scrollable.right").find(".temperature").stop(true, true).animate({
-		"top": (-433 + (value * 33) + '%')
+		"top": (35 - (14 - value) * 52)
 	});
 };
 
@@ -333,7 +333,7 @@ hvacController.prototype.onTargetTemperatureLeftChanged = function (newStatus) {
 	var value = getTargetTemperatureSliderValue(newStatus);
 	$("#noUiSliderLeft").val(value);
 	$(".scrollable.left").find(".temperature").stop(true, true).animate({
-		"top": (-433 + (value * 33) + '%')
+		"top": (35 - (14 - value) * 52)
 	});
 };
 

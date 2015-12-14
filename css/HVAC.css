@@ -36,7 +36,7 @@
 .noUiSliderLeft,
 .noUiSliderRight {
   position: absolute;
-  top: 14.6%;
+  top: 16.5%;
 }
 
 .noUiSliderLeft,
@@ -62,8 +62,9 @@
 
 .noUiSliderLeft.vertical,
 .noUiSliderRight.vertical {
-  width: 14.65%;
-  height: 783px;
+  width: 10.3%;
+  height: 80%;
+  bottom: 0px;
 }
 .noUiSliderLeft.vertical a,
 .noUiSliderRight.vertical a {
@@ -94,18 +95,18 @@
 }
 
 .noUiSliderLeft div {
-  background-position-x: 91px;
-  background-size: 15%;
+  background-position-x: 63px;
+  background-size: 12%;
 }
 
 .noUiSliderLeft.vertical div {
-  margin: -50px -60px 0 -1px;
+  margin: -46px -60px 0 -1px;
 }
 
 /*********RIGHT*******/
 
 .noUiSliderRight {
-  left: 30.8em;
+  left: 30.2em;
 }
 
 .noUiSliderRight.connect a,
@@ -115,12 +116,12 @@
 }
 
 .noUiSliderRight div {
-  background-position-x: 5px;
+  background-position-x: 12px;
   background-size: 26%;
 }
 
 .noUiSliderRight.vertical div {
-  margin: -50px 30px 0 0;
+  margin: -46px 30px 0 0;
 }
 
 /*********FAN*******/
@@ -232,9 +233,9 @@
 
 .static_parts_bg {
   position: absolute;
-  top: 18%;
+  top: 22%;
   width: 100%;
-  height: 60.1%;
+  height: 74%;
   background: url('../images/static_parts_bg.svg') no-repeat;
   background-size: 100%;
 }
@@ -261,18 +262,25 @@
 }
 
 .climate_labels {
-  position: relative;
-  top: 9em;
-  left: 4em;
+  position: absolute;
+  top: 10%;
+  left: 11%;
   width: 28em;
   height: 1.5em;
 }
 
 .label_borders {
   float: left;
-  margin: 0 1.7em 0 3.8em;
   padding-left: 2%;
   border-left: 67px solid #fe9c00;
+}
+
+#climate-label-right {
+  margin: 0.4em 0 0 12.5em;
+}
+
+#climate-label-left {
+  margin: 0.4em 0 0 0;
 }
 
 /*********LEFT HEAT SEAT BUTTON************/
@@ -288,22 +296,23 @@ the engine is off and the seat heaters are unusable at that time */
 .left_seat_btn {
   position: absolute;
   top: 22%;
-  left: 21.1111%;
-  width: 22.08333333%;
-  height: 6.4em;
+  left: 11%;
+  width: 3em;
+  height: 3em;
 }
 
 .left_heat_seat_off {
   position: absolute;
+  bottom: 0px;
   width: 100%;
   height: 100%;
   background: url('../images/left_heat_seat_off.svg') no-repeat;
-  background-size: 100%;
+  background-size: 100% 100%;
 }
 
 .left_heat_seat_on {
   position: absolute;
-  bottom: 0;
+  bottom: 8px;
   width: 100%;
   height: 100%;
   background: url('../images/left_heat_seat_on.svg') no-repeat bottom;
@@ -311,15 +320,15 @@ the engine is off and the seat heaters are unusable at that time */
 }
 
 .left_heat_seat_on.stage1 {
-  height: 0;
+  height: 0px;
 }
 
 .left_heat_seat_on.stage2 {
-  height: 44%;
+  height: 36%;
 }
 
 .left_heat_seat_on.stage3 {
-  height: 64%;
+  height: 52%;
 }
 
 .left_heat_seat_on.stage4 {
@@ -332,10 +341,11 @@ the engine is off and the seat heaters are unusable at that time */
 the engine is off and the seat heaters are unusable at that time */
 .right_seat_btn {
   position: absolute;
-  top: 22%;
-  right: 21.1111%;
-  width: 22.08333333%;
-  height: 6.4em;
+  bottom: 0px;
+  top: 24%;
+  right: 11%;
+  width: 3em;
+  height: 3em;
 }
 
 .right_heat_seat_off {
@@ -348,7 +358,7 @@ the engine is off and the seat heaters are unusable at that time */
 
 .right_heat_seat_on {
   position: absolute;
-  bottom: 0;
+  bottom: 18px;
   width: 100%;
   height: 100%;
   background: url('../images/right_heat_seat_on.svg') no-repeat bottom;
@@ -360,11 +370,11 @@ the engine is off and the seat heaters are unusable at that time */
 }
 
 .right_heat_seat_on.stage2 {
-  height: 44%;
+  height: 36%;
 }
 
 .right_heat_seat_on.stage3 {
-  height: 64%;
+  height: 52%;
 }
 
 .right_heat_seat_on.stage4 {
@@ -374,24 +384,24 @@ the engine is off and the seat heaters are unusable at that time */
 /*********LEFT NUM SLIDER************/
 .left_num_bg {
   position: absolute;
-  top: 35.1%;
-  left: 7.6em;
+  top: 52%;
+  left: 5.2%;
   overflow: hidden;
-  width: 21.9444444%;
-  height: 11.5em;
+  width: 7em;
+  height: 4.4em;
   background: url('../images/left_number_bg.svg') no-repeat;
-  background-size: 100%;
+  background-size: 100% 100%;
 }
 
 .left_num_cover {
   position: absolute;
-  top: 35%;
-  left: 21.1111%;
-  width: 21.9444444%;
-  height: 11.6em;
+  top: 52%;
+  left: 5.2%;
+  width: 7em;
+  height: 4.4em;
   pointer-events: none;
   background: url('../images/left_number_cover.svg') no-repeat;
-  background-size: 100%;
+  background-size: 100% 100%;
 }
 
 .scrollable.left {
@@ -401,23 +411,23 @@ the engine is off and the seat heaters are unusable at that time */
 }
 
 .scrollable.left ul {
-  font-size: 7em;
+  font-size: 2.4em;
   position: relative; /* Enables positionning of elements inside viewport */
   height: 100%;
   margin: 0;
-  margin-left: 50px;
+  margin-left: 28%;
   padding: 0;
   list-style-type: none;
 }
 
 .scrollable.left li {
-  font-size: 9rem;
+  font-size: 4rem;
   line-height: 130%;
   position: relative;
   width: 100%;
   margin: 0;
   padding: 0;
-  padding-left: 5%;
+  padding-left: 10%;
   text-align: left;
   color: #fff;
 }
@@ -425,24 +435,24 @@ the engine is off and the seat heaters are unusable at that time */
 /*********RIGHT NUM SLIDER************/
 .right_num_bg {
   position: absolute;
-  top: 35%;
-  right: 7.6em;
+  top: 52%;
+  right: 5.2%;
   overflow: hidden;
-  width: 21.9444444%;
-  height: 11.5em;
+  width: 7em;
+  height: 4.4em;
   background: url('../images/right_number_bg.svg') no-repeat;
-  background-size: 100%;
+  background-size: 100% 100%;
 }
 
 .right_num_cover {
   position: absolute;
-  top: 35%;
-  right: 21.1111%;
-  width: 21.9444444%;
-  height: 11.6em;
+  top: 52%;
+  right: 5.2%;
+  width: 7em;
+  height: 4.4em;
   pointer-events: none;
   background: url('../images/right_number_cover.svg') no-repeat;
-  background-size: 100%;
+  background-size: 100% 100%;
 }
 
 .scrollable.right {
@@ -452,23 +462,23 @@ the engine is off and the seat heaters are unusable at that time */
 }
 
 .scrollable.right ul {
-  font-size: 7em;
+  font-size: 2.4em;
   position: relative; /* Enables positionning of elements inside viewport */
   height: 100%;
   margin: 0;
-  margin-left: 40px;
+  margin-left: 28%;
   padding: 0;
   list-style-type: none;
 }
 
 .scrollable.right li {
-  font-size: 9rem;
+  font-size: 4rem;
   line-height: 130%;
   position: relative;
   width: 100%;
   margin: 0;
   padding: 0;
-  padding-left: 16%;
+  padding-left: 21%;
   text-align: left;
   color: #fff;
 }
