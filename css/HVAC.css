@@ -190,10 +190,8 @@
 
 .noUiSliderFan div {
   width: 80px;
-  height: 100%;
-  border-radius: 3px;
-  background: url('/images/drag_knob.svg') no-repeat center bottom;
-  background-size: 40%;
+  height: 86px;
+  background: url('../images/drag_knob.svg') no-repeat center bottom;
 }
 
 .noUiSliderFan.disabled div {
