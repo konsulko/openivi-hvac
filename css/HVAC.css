@@ -201,8 +201,8 @@
 }
 
 .noUiSliderFan.horizontal {
-  width: 42.5%;
-  height: 11%;
+  width: 26.5%;
+  height: 18%;
 }
 
 .noUiSliderFan.horizontal a {
@@ -216,8 +216,9 @@
 
 .noUiSliderFan {
   position: absolute;
-  top: 66.95%;
-  left: 33%;
+  top: 72%;
+  left: 39.6%;
+  z-index: 6;
 }
 
 /*end UI slider stuff*/
@@ -489,11 +490,10 @@ the engine is off and the seat heaters are unusable at that time */
 /*************lower half******************/
 .fanSpeedOn {
   position: absolute;
-  top: 35.45em;
-  bottom: 25.7em;
-  left: 11.9em;
+  top: 71.4%;
+  left: 39.7%;
   width: 0;
-  height: 9.4%;
+  height: 25%;
   background: url('../images/fan_bar_on.png') no-repeat;
 }
 
