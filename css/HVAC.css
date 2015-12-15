@@ -244,7 +244,7 @@
 .hazard_btn {
   position: absolute;
   top: 40px;
-  left: 7.5em;
+  left: 6.6em;
   width: 20.9em;
   height: 1.5em;
   background: url('../images/hazard_off.svg') no-repeat;
@@ -545,47 +545,47 @@ the engine is off and the seat heaters are unusable at that time */
 
 .fan_control_ac {
   position: absolute;
-  top: 78.1%;
-  left: 24.333%;
+  top: 25.5%;
+  left: 33%;
   width: 15.555556%;
   height: 4.4em;
   background: url('../images/fan_control_ac_off.svg') no-repeat;
-  background-size: 100%;
+  background-size: 55%;
 }
 
 .fan_control_ac.on {
   background: url('../images/fan_control_ac_on.svg') no-repeat;
-  background-size: 100%;
+  background-size: 55%;
 }
 
 .fan_control_auto {
   position: absolute;
-  top: 78.1%;
-  left: 42.333%;
+  top: 25.5%;
+  left: 45.5%;
   width: 15.416667%;
   height: 4.4em;
   background: url('../images/fan_control_auto_off.svg') no-repeat;
-  background-size: 100%;
+  background-size: 55%;
 }
 
 .fan_control_auto.on {
   background: url('../images/fan_control_auto_on.svg') no-repeat;
-  background-size: 100%;
+  background-size: 55%;
 }
 
 .fan_control_circ {
   position: absolute;
-  top: 78.1%;
-  left: 60.333%;
+  top: 25.5%;
+  left: 58%;
   width: 15.555556%;
   height: 4.4em;
   background: url('../images/fan_control_circ_off.svg') no-repeat;
-  background-size: 100%;
+  background-size: 55%;
 }
 
 .fan_control_circ.on {
   background: url('../images/fan_control_circ_on.svg') no-repeat;
-  background-size: 100%;
+  background-size: 55%;
 }
 
 /***DEFROST****/
