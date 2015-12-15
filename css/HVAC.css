@@ -249,6 +249,7 @@
   height: 1.5em;
   background: url('../images/hazard_off.svg') no-repeat;
   background-size: 100% 100%;
+  z-index: 5;
 }
 
 .hazard_btn.on {
@@ -500,46 +501,46 @@ the engine is off and the seat heaters are unusable at that time */
 /********FAN DIRECTION***********/
 .fan_dir_down_btn {
   position: absolute;
-  top: 69%;
-  left: 3.333333%;
+  top: 25.5%;
+  left: 21%;
   width: 17.08333333%;
   height: 4.8em;
   background: url('../images/fan_dir_down_off.svg') no-repeat;
-  background-size: 100%;
+  background-size: 50%;
 }
 
 .fan_dir_down_btn.on {
   background: url('../images/fan_dir_down_on.svg') no-repeat;
-  background-size: 100%;
+  background-size: 50%;
 }
 
 .fan_dir_right_btn {
   position: absolute;
-  top: 78%;
-  left: 3.333333%;
+  top: 50%;
+  left: 21%;
   width: 17.08333333%;
   height: 4.4em;
   background: url('../images/fan_dir_right_off.svg') no-repeat;
-  background-size: 100%;
+  background-size: 50%;
 }
 
 .fan_dir_right_btn.on {
   background: url('../images/fan_dir_right_on.svg') no-repeat;
-  background-size: 100%;
+  background-size: 50%;
 }
 
 .fan_dir_up_btn {
   position: absolute;
-  top: 86.2%;
-  left: 3.333333%;
+  top: 72%;
+  left: 21%;
   width: 17.08333333%;
   height: 4.4em;
   background: url('../images/fan_dir_up_off.svg') no-repeat;
-  background-size: 100%;
+  background-size: 50%;
 }
 .fan_dir_up_btn.on {
   background: url('../images/fan_dir_up_on.svg') no-repeat;
-  background-size: 100%;
+  background-size: 50%;
 }
 
 .fan_control_ac {
@@ -590,45 +591,45 @@ the engine is off and the seat heaters are unusable at that time */
 /***DEFROST****/
 .defrost_max_btn {
   position: absolute;
-  top: 69%;
-  right: 3.333333%;
+  top: 25.5%;
+  right: 13%;
   width: 17.08333333%;
   height: 4.8em;
   background: url('../images/defrost_max_off.svg') no-repeat;
-  background-size: 100%;
+  background-size: 50%;
 }
 
 .defrost_max_btn.on {
   background: url('../images/defrost_max_on.svg') no-repeat;
-  background-size: 100%;
+  background-size: 50%;
 }
 
 .defrost_rear_btn {
   position: absolute;
-  top: 78%;
-  right: 3.333333%;
+  top: 50%;
+  right: 13%;
   width: 17.08333333%;
   height: 4.4em;
   background: url('../images/defrost_rear_off.svg') no-repeat;
-  background-size: 100%;
+  background-size: 50%;
 }
 
 .defrost_rear_btn.on {
   background: url('../images/defrost_rear_on.svg') no-repeat;
-  background-size: 100%;
+  background-size: 50%;
 }
 
 .defrost_front_btn {
   position: absolute;
-  top: 86.2%;
-  right: 3.333333%;
+  top: 72%;
+  right: 13%;
   width: 17.08333333%;
   height: 4.4em;
   background: url('../images/defrost_front_off.svg') no-repeat;
-  background-size: 100%;
+  background-size: 50%;
 }
 
 .defrost_front_btn.on {
   background: url('../images/defrost_front_on.svg') no-repeat;
-  background-size: 100%;
+  background-size: 50%;
 }
