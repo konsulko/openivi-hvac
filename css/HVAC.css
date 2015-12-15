@@ -299,6 +299,7 @@ the engine is off and the seat heaters are unusable at that time */
   left: 11%;
   width: 3em;
   height: 3em;
+  z-index: 5;
 }
 
 .left_heat_seat_off {
@@ -346,6 +347,7 @@ the engine is off and the seat heaters are unusable at that time */
   right: 11%;
   width: 3em;
   height: 3em;
+  z-index: 5;
 }
 
 .right_heat_seat_off {
