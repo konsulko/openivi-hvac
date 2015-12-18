@@ -3,7 +3,7 @@
 * Proprietary and confidential
 * Unauthorized copying of this file, via any medium, is strictly prohibited
 *
-* THIS CODE AND INFORMATION ARE PROVIDED "AS IS" WITHOUT WARRANTY OF ANY 
+* THIS CODE AND INFORMATION ARE PROVIDED "AS IS" WITHOUT WARRANTY OF ANY
 * KIND, EITHER EXPRESSED OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE
 * IMPLIED WARRANTIES OF MERCHANTABILITY AND/OR FITNESS FOR A
 * PARTICULAR PURPOSE.
@@ -36,11 +36,11 @@ function addItemClick(item) {
 	console.log($("input[name='item_title']").val());
 	console.log($("textarea[name='item_description']").val());
 	console.log($("[name='item_template']").contents());
-	
+
 	// Capture the title and description data to be sent to the extension later.
 	var ti=$("input[name='item_title']").val();
 	var descr=$("textarea[name='item_description']").val();
-	
+
 	var newItemTemplate = $($("[name='item_template']").html());
 	console.log(newItemTemplate);
 	newItemTemplate.find("td[name='item_title_field']").text($("input[name='item_title']").val());
@@ -50,7 +50,7 @@ function addItemClick(item) {
 	newItem.find("input[name='delete_item']").click(newItem,deleteItemClick);
 	$("tbody[name='item_list_body']").append(newItem);
 	$("form[name='add_item_form']")[0].reset();
-	
+
 	// Send the title and description to the extension:
 	var jsonenc = {api:"handleItem", dest:"Item Consumer", title:ti, desc:descr};
 	console.log("stringify before bp.bpAsynch is "+JSON.stringify(jsonenc));
@@ -79,7 +79,7 @@ function bigClick(item) {
 
 /**
  * Initialize application components and register button events.
- * 
+ *
  * @method init
  * @static
  */
@@ -87,11 +87,14 @@ var hvacIndicator;
 var init_hvac = function () {
 	console.log("init_hvac()");
 
+	if (undefined === carIndicator.extras)
+		carIndicator.extras = {};
+
     if(!hvacIndicator)
     {
         hvacIndicator = new hvacController();
 
-        if(!carIndicator)
+        if(undefined !== carIndicator && !carIndicator)
             $(document).on("carIndicatorReady", setup_ui);
         else
             setup_ui();
@@ -116,7 +119,7 @@ var init_hvac = function () {
 			catch(err){
 				console.log("FrontTSetLeftCmd carIndicator.setStatus failed");
 			}
-			
+
 	        try{
 				carIndicator.setStatus("FrontTSetRightCmd", 15);
 			}
@@ -124,7 +127,7 @@ var init_hvac = function () {
 				console.log("FrontTSetRightCmd carIndicator.setStatus failed");
 			}
     }
-    
+
     depenancyMet("hvacIndicator.loaded");
 };
 
@@ -187,8 +190,10 @@ function setup_ui() {
 	    connect : "upper",
 	    orientation : "horizontal",
 	    slide : function() {
-		carIndicator.setStatus("fanSpeed", $(this).val());
-		carIndicator.setStatus("FrontBlwrSpeedCmd", ($(this).val()));
+				var newFanValue = $(this).val();
+				carIndicator.setStatus("fanSpeed", newFanValue);
+				hvacIndicator.onFanSpeedChanged(newFanValue);
+				carIndicator.setStatus("FrontBlwrSpeedCmd", newFanValue);
 	    }
 	});
 
@@ -247,8 +252,8 @@ $(document).ready(function(){onDepenancy("carIndicator.js",init_hvac)}); //$(doc
 //$("#left_seat_btn").click(function() {
 /*	if (bootstrap.carIndicator.getStatus("EngineRunningstatus?")) {
 		$("#left_seat_btn").addClass("engine-off");
-		$("#right_seat_btn").addClass("engine-off");	
-		console.log("carIndicator status EngineRunningstatus");	
+		$("#right_seat_btn").addClass("engine-off");
+		console.log("carIndicator status EngineRunningstatus");
 	}
 	else {
 		$("#left_seat_btn").removeClass("engine-off");

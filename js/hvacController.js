@@ -796,7 +796,7 @@ hvacController.prototype.initButtons = function () {
 			carIndicator.extras.defrostMax = true;
 		}
 
-		sendRVIHVAC("hvac/defrost_max", carIndicator.extras.defrostMax);
+		//sendRVIHVAC("hvac/defrost_max", carIndicator.extras.defrostMax);
 	});
 
 	// Defrost - Rear
