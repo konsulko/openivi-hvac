@@ -21,7 +21,7 @@
 
 /* Adds z-index to #settingsPage due to z-indexing in sliderui js */
 #hvac-app #settingsPage {
-  z-index: 3;
+  z-index: 6;
 }
 
 /* Override for Settings list items */
